@@ -1,4 +1,4 @@
-package dev.elsboo.founding.client;
+package dev.elsboo.founding.client.coupang;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor
-public class CoupangBestCategoryResponse {
+public class BestCategoryResponse {
 
     private String rCode;
     private String rMessage;
@@ -23,7 +23,7 @@ public class CoupangBestCategoryResponse {
         private Integer productId;
         private String productImage;
         private String productName;
-        private String productPrice;
+        private Integer productPrice;
         private String productUrl;
     }
 }

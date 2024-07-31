@@ -1,11 +1,11 @@
-package dev.elsboo.founding.client;
+package dev.elsboo.founding.client.coupang;
 
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @Builder
-public class CoupangBestCategoryRequest {
+public class BestCategoryRequest {
 
     private Integer categoryId;
     private Integer limit;
