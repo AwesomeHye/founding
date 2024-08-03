@@ -1,1 +1,5 @@
 rootProject.name = 'founding'
+include 'founding-batch'
+include 'founding-display'
+include 'founding-db'
+include 'clients:coupang-client'

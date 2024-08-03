@@ -1,0 +1,7 @@
+client:
+  coupang-base-url: https://api-gateway.coupang.com/v2/providers/affiliate_open_api/apis/openapi/v1/
+
+
+feign:
+  okhttp:
+    enabled: true

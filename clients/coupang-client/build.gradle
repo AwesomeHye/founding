@@ -1,0 +1,12 @@
+bootJar { enabled = false }
+jar { enabled = true }
+
+dependencies {
+    // for coupang authorization
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.17.1'
+
+    implementation platform("org.springframework.cloud:spring-cloud-dependencies:2023.0.3")
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.1.3'
+
+
+}

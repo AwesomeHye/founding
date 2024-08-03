@@ -1,0 +1,10 @@
+bootJar { enabled = false }
+jar { enabled = true }
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.3.2'
+
+    runtimeOnly group: 'com.mysql', name: 'mysql-connector-j' // runtimeOnly: 실행 시점에만 필요할 때
+
+}
