@@ -1,7 +1,12 @@
-client:
-  coupang-base-url: https://api-gateway.coupang.com/v2/providers/affiliate_open_api/apis/openapi/v1/
-
+spring:
+  config:
+    import: classpath:/config/auth.yml
+    additional-location:
 
 feign:
   okhttp:
     enabled: true
+
+client:
+  domain: https://api-gateway.coupang.com
+  base-url: /v2/providers/affiliate_open_api/apis/openapi/v1
