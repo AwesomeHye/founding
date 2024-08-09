@@ -24,7 +24,8 @@ class CoupangClientApplicationTests {
 
     @Test
     void getCoupangClientResponse() throws JsonProcessingException {
-        BestCategoryResponse bestCategories = coupangClient.getBestCategories(Category.WOMAN_FASHION.getCategoryId());
+//        BestCategoryResponse bestCategories = coupangClient.getBestCategories(Category.WOMAN_FASHION.getCategoryId());
+        BestCategoryResponse bestCategories = coupangClient.getBestCategories(Category.WOMAN_FASHION.getCategoryId(), new BestCategoryRequest());
         log.info("{}", objectMapper.writeValueAsString(bestCategories));
     }
 

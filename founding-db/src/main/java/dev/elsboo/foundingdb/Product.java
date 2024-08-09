@@ -24,16 +24,16 @@ public class Product {
     private String categoryName;
     private Boolean isRocket;
     private Boolean isFreeShipping;
-    private Integer productId;
+    private Long productId;
     private String productImage;
     private String productName;
-    private Integer productPrice;
+    private Long productPrice;
     private String productUrl;
     private String timestamp;
 
     @Builder
-    public Product(int id, String categoryName, Boolean isRocket, Boolean isFreeShipping, Integer productId, String productImage, String productName,
-                   Integer productPrice, String productUrl, String timestamp) {
+    public Product(int id, String categoryName, Boolean isRocket, Boolean isFreeShipping, Long productId, String productImage, String productName,
+                   Long productPrice, String productUrl, String timestamp) {
         this.id = id;
         this.categoryName = categoryName;
         this.isRocket = isRocket;

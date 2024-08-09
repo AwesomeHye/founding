@@ -1,7 +1,8 @@
 package dev.elsboo.foundingbatch;
 
-import dev.elsboo.founding.db.CoupangRepository;
-import dev.elsboo.founding.db.Product;
+
+import dev.elsboo.foundingdb.CoupangRepository;
+import dev.elsboo.foundingdb.Product;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.Chunk;
@@ -19,12 +20,15 @@ public class DbWriter implements ItemWriter<List<Product>> {
 
     private final CoupangRepository coupangRepository;
 
-
     @Override
     public void write(Chunk<? extends List<Product>> chunk) {
         List<? extends List<Product>> items = chunk.getItems();
-        List<Product> products = items.stream().flatMap(Collection::stream).collect(Collectors.toList());
-        coupangRepository.saveAll(products);
+        List<Product> products = items.stream()
+            .flatMap(Collection::stream)
+            .collect(Collectors.toList());
+
+//        coupangRepository.saveAll(products);
+
         log.info("Write chunk: {}", products);
     }
 }

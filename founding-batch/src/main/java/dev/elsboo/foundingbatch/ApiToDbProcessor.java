@@ -1,7 +1,8 @@
 package dev.elsboo.foundingbatch;
 
-import dev.elsboo.founding.client.coupang.BestCategoryResponse;
-import dev.elsboo.founding.db.Product;
+
+import dev.elsboo.coupang.BestCategoryResponse;
+import dev.elsboo.foundingdb.Product;
 import org.springframework.batch.item.ItemProcessor;
 
 import java.util.List;

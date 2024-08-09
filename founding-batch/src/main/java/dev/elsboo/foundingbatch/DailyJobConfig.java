@@ -1,7 +1,7 @@
 package dev.elsboo.foundingbatch;
 
-import dev.elsboo.founding.client.coupang.BestCategoryResponse;
-import dev.elsboo.founding.db.Product;
+import dev.elsboo.coupang.BestCategoryResponse;
+import dev.elsboo.foundingdb.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;

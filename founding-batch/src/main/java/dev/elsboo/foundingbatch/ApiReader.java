@@ -22,9 +22,10 @@ public class ApiReader implements ItemReader<List<BestCategoryResponse>> {
 
         List<BestCategoryResponse> bestCategoryResponses = Arrays.stream(Category.values())
             .map(category ->
-                coupangClient.getCategoryBestProducts(BestCategoryRequest.builder()
-                    .categoryId(category.getCategoryId())
-                    .build())
+                coupangClient.getBestCategories(
+                    category.getCategoryId(),
+                    new BestCategoryRequest()
+                )
             ).toList();
 
         // null 을 반환하면 읽기를 멈춤

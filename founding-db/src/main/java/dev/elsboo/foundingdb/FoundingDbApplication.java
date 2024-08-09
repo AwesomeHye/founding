@@ -9,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FoundingDbApplication {
 
     public static void main(String[] args) {
-        log.info("D");
         SpringApplication.run(FoundingDbApplication.class, args);
     }
 
