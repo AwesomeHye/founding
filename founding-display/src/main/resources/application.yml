@@ -1,3 +1,14 @@
 server:
   port: 9080
 
+spring:
+  r2dbc:
+    url: jdbc:mysql://localhost:3206/spring_batch?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 9999
+    pool:
+      max-size: 10
+      validation-query: SELECT 1
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
