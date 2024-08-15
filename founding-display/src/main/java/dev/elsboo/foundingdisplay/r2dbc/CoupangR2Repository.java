@@ -20,7 +20,7 @@ public class CoupangR2Repository {
     private final R2dbcEntityTemplate r2dbcEntityTemplate;
 
     public Flux<Map<String, Object>> findAll() {
-        return databaseClient.sql("SELECT * FROM coupang")
+        return databaseClient.sql("SELECT * FROM coupang_product")
             .fetch()
             .all()
             .switchIfEmpty(Flux.empty())
@@ -28,7 +28,7 @@ public class CoupangR2Repository {
     }
 
     public Flux<Map<String, Object>> findById(Integer id) {
-        return databaseClient.sql("SELECT * FROM coupang WHERE id = :id")
+        return databaseClient.sql("SELECT * FROM coupang_product WHERE id = :id")
             .bind("id", id)
             .fetch()
             .all();

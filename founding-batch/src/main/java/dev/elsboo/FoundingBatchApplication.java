@@ -11,7 +11,6 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.PropertySource;
 
 import java.time.LocalDateTime;
 
@@ -19,14 +18,13 @@ import static dev.elsboo.foundingbatch.DailyJobConfig.DAILY_JOB;
 
 @SpringBootApplication
 @EnableBatchProcessing
-@PropertySource("classpath:a")
 @Slf4j
 public class FoundingBatchApplication implements ApplicationRunner {
 
     private final JobLauncher jobLauncher;
     private final Job job;
 
-    // @혜인 TODO: 2024. 8. 15. mysql mount docker, create table, yml 고치기
+    // @혜인 TODO: 2024. 8. 15. yml 고치기
     public FoundingBatchApplication(JobLauncher jobLauncher, @Qualifier(DAILY_JOB) Job job, CoupangClientConfiguration coupangClientConfiguration) {
         this.jobLauncher = jobLauncher;
         this.job = job;

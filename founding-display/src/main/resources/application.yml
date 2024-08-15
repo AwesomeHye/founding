@@ -3,9 +3,7 @@ server:
 
 spring:
   r2dbc:
-    url: jdbc:mysql://localhost:3206/spring_batch?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: 9999
+    url: r2dbc:mysql://root:9999@localhost:3206/founding?useUnicode=true&characterEncoding=utf8
     pool:
       max-size: 10
       validation-query: SELECT 1

@@ -15,7 +15,7 @@ class CoupangClientApplicationTests {
     private final ObjectMapper objectMapper;
 
     @Autowired
-    CoupangClient coupangClient;
+    CoupangService.CoupangClient coupangClient;
 
     public CoupangClientApplicationTests() {
         this.objectMapper = new ObjectMapper();
