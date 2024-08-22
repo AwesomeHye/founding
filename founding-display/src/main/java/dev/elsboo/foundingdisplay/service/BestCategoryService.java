@@ -13,8 +13,9 @@ public class BestCategoryService {
 
     private final CoupangR2Repository coupangR2Repository;
 
-    public void findAll() {
+    public Flux<Map<String, Object>> findAll() {
         Flux<Map<String, Object>> all = coupangR2Repository.findAll();
+        return all;
     }
 
 }

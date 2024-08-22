@@ -14,8 +14,9 @@ class CoupangR2RepositoryTest {
 
     @Test
     void findAll() {
-        Map<String, Object> result = coupangR2Repository.findAll().blockFirst();
-        System.out.println(result);
+        coupangR2Repository.findAll()
+            .doOnNext(System.out::println)
+            .blockLast();
     }
 
     @Test
