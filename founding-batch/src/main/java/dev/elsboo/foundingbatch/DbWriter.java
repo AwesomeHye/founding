@@ -27,7 +27,7 @@ public class DbWriter implements ItemWriter<List<Product>> {
             .flatMap(Collection::stream)
             .collect(Collectors.toList());
 
-//        coupangRepository.saveAll(products);
+        coupangRepository.saveAll(products);
 
         log.info("Write chunk: {}", products);
     }

@@ -11,7 +11,9 @@ public class ApiToDbProcessor implements ItemProcessor<List<BestCategoryResponse
 
     @Override
     public List<Product> process(List<BestCategoryResponse> categoryResponses) {
-        return categoryResponses.stream().flatMap(response -> response.getData().stream())
+        return categoryResponses.stream()
+            .filter(response -> response.getData() != null)
+            .flatMap(response -> response.getData().stream())
             .map(item -> Product.builder()
                 .categoryName(item.getCategoryName())
                 .isRocket(item.getIsRocket())

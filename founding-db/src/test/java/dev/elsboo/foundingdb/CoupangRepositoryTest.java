@@ -1,5 +1,6 @@
 package dev.elsboo.foundingdb;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -9,7 +10,7 @@ class CoupangRepositoryTest {
     @Autowired
     CoupangRepository coupangRepository;
 
-    @org.junit.jupiter.api.Test
+    @Test
     void test() {
         Product product = Product.builder()
             .categoryName("test")

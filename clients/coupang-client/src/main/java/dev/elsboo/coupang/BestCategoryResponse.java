@@ -1,15 +1,22 @@
 package dev.elsboo.coupang;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.Collections;
 import java.util.List;
 
 @Getter
 @NoArgsConstructor
 @ToString
+@AllArgsConstructor
+@Builder
 public class BestCategoryResponse {
+
+    public static final BestCategoryResponse EMPTY = BestCategoryResponse.builder().data(Collections.emptyList()).build();
 
     private String rCode;
     private String rMessage;

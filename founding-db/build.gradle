@@ -1,9 +1,13 @@
+plugins {
+    id 'java-library' // for api in dependencies
+}
+
 bootJar { enabled = false }
 jar { enabled = true }
 
 dependencies {
 //    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.2'
+    api 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.2'
 
     runtimeOnly 'com.mysql:mysql-connector-j' // runtimeOnly: 실행 시점에만 필요할 때
 
