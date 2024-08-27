@@ -25,6 +25,8 @@ public class BestCategoryResponse {
     @Getter
     @NoArgsConstructor
     @ToString
+    @Builder
+    @AllArgsConstructor
     public static class Product {
 
         private String categoryName;

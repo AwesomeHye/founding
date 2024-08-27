@@ -33,7 +33,7 @@ public class DailyJobConfig {
                           ApiReader apiReader, DbWriter dbWriter
     ) {
         return new StepBuilder("dailyStep", jobRepository)
-            .<List<BestCategoryResponse>, List<Product>>chunk(1, transactionManager)
+            .<List<BestCategoryResponse>, List<Product>>chunk(5, transactionManager)
             .reader(apiReader)
             .processor(new ApiToDbProcessor())
             .writer(dbWriter)

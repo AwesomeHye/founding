@@ -24,7 +24,6 @@ public class FoundingBatchApplication implements ApplicationRunner {
     private final JobLauncher jobLauncher;
     private final Job job;
 
-    // @혜인 TODO: 2024. 8. 15. yml 고치기
     public FoundingBatchApplication(JobLauncher jobLauncher, @Qualifier(DAILY_JOB) Job job, CoupangClientConfiguration coupangClientConfiguration) {
         this.jobLauncher = jobLauncher;
         this.job = job;
