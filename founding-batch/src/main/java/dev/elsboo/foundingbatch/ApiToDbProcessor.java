@@ -7,13 +7,13 @@ import org.springframework.batch.item.ItemProcessor;
 
 import java.util.List;
 
-public class ApiToDbProcessor implements ItemProcessor<List<BestCategoryResponse>, List<Product>> {
+public class ApiToDbProcessor implements ItemProcessor<BestCategoryResponse, List<Product>> {
 
     @Override
-    public List<Product> process(List<BestCategoryResponse> categoryResponses) {
-        return categoryResponses.stream()
-            .filter(response -> response.getData() != null)
-            .flatMap(response -> response.getData().stream())
+    public List<Product> process(BestCategoryResponse categoryResponses) {
+        List<BestCategoryResponse.Product> items = categoryResponses.getData();
+
+        return items.stream()
             .map(item -> Product.builder()
                 .categoryName(item.getCategoryName())
                 .isRocket(item.getIsRocket())
