@@ -1,4 +1,4 @@
-package dev.elsboo;
+package dev.elsboo.config;
 
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.core.env.PropertiesPropertySource;

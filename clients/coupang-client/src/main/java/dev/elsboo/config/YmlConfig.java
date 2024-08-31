@@ -1,4 +1,4 @@
-package dev.elsboo;
+package dev.elsboo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

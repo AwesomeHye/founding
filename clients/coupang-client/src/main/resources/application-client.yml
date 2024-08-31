@@ -6,9 +6,13 @@ feign:
   okhttp:
     enabled: true
 
+
 client:
   domain: https://api-gateway.coupang.com
   base-url: /v2/providers/affiliate_open_api/apis/openapi/v1
 
+logging.level:
+  feign: DEBUG
+  dev.elsboo.coupang: DEBUG
 
 

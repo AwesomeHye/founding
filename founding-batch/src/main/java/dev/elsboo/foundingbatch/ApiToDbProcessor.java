@@ -11,6 +11,7 @@ public class ApiToDbProcessor implements ItemProcessor<BestCategoryResponse, Lis
 
     @Override
     public List<Product> process(BestCategoryResponse categoryResponses) {
+
         List<BestCategoryResponse.Product> items = categoryResponses.getData();
 
         return items.stream()

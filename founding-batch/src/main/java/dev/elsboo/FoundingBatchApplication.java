@@ -1,6 +1,6 @@
 package dev.elsboo;
 
-import dev.elsboo.coupang.CoupangClientConfiguration;
+import dev.elsboo.coupang.auth.CoupangClientConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParametersBuilder;

@@ -1,4 +1,4 @@
-package dev.elsboo.coupang;
+package dev.elsboo.coupang.auth;
 
 import org.apache.commons.codec.binary.Hex;
 

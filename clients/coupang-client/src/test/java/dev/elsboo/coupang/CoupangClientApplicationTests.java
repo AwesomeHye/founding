@@ -15,7 +15,7 @@ class CoupangClientApplicationTests {
     private final ObjectMapper objectMapper;
 
     @Autowired
-    CoupangService.CoupangClient coupangClient;
+    CoupangClient coupangClient;
 
     public CoupangClientApplicationTests() {
         this.objectMapper = new ObjectMapper();
@@ -25,7 +25,8 @@ class CoupangClientApplicationTests {
     @Test
     void getCoupangClientResponse() throws JsonProcessingException {
 //        BestCategoryResponse bestCategories = coupangClient.getBestCategories(Category.WOMAN_FASHION.getCategoryId());
-        BestCategoryResponse bestCategories = coupangClient.getBestCategories(Category.WOMAN_FASHION.getCategoryId(), new BestCategoryRequest());
+        BestCategoryRequest request = new BestCategoryRequest();
+        BestCategoryResponse bestCategories = coupangClient.getBestCategories(Category.WOMAN_FASHION.getCategoryId(), request.getLimit(), request.getSubId());
         log.info("{}", objectMapper.writeValueAsString(bestCategories));
     }
 

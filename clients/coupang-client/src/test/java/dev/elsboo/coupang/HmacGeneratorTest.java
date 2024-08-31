@@ -1,5 +1,6 @@
 package dev.elsboo.coupang;
 
+import dev.elsboo.coupang.auth.HmacGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class HmacGeneratorTest {
 
     private final static String REQUEST_METHOD = "GET";
-    private final static String URL = "/v2/providers/affiliate_open_api/apis/openapi/v1/products/bestcategories/1001?limit=50";
+    private final static String URL = "/v2/providers/affiliate_open_api/apis/openapi/v1/products/bestcategories/1002?limit=50";
 
     @Value("${coupang.access-key}")
     private String accessKey;

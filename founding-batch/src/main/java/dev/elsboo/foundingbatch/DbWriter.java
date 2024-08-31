@@ -29,6 +29,6 @@ public class DbWriter implements ItemWriter<List<Product>> {
 
         coupangRepository.saveAll(products);
 
-        log.info("Write chunk: {}", products);
+        log.info("Write chunk size: {}, {}", products.size(), products);
     }
 }

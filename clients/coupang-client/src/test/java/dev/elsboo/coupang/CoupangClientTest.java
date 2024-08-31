@@ -7,19 +7,19 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
-class CoupangServiceTest {
+class CoupangClientTest {
 
     @Autowired
-    private CoupangService coupangService;
+    private CoupangClient coupangclient;
 
     @Test
     void getBestCategories() {
         BestCategoryRequest request = new BestCategoryRequest();
-        BestCategoryResponse bestCategories = coupangService.getBestCategories(1001, request);
+        BestCategoryResponse bestCategories = coupangclient.getBestCategories(1001, request.getLimit(), request.getSubId());
 
+        System.out.println(bestCategories);
         assertNotNull(bestCategories);
         assertNotNull(bestCategories.getData());
-        System.out.println(bestCategories);
     }
 
 }
