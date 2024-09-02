@@ -1,6 +1,7 @@
 import React from "react";
 
-function Display() {
+function
+Display() {
     const name = '안녕?'
     return (
       <>
