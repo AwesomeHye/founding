@@ -3,7 +3,9 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:mysql://root:9999@localhost:3206/founding?useUnicode=true&characterEncoding=utf8
+    url: r2dbc:mysql://root:9999@localhost:3206/founding?ussSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 9999
     pool:
       max-size: 10
       validation-query: SELECT 1

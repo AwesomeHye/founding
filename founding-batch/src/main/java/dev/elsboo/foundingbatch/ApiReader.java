@@ -28,7 +28,7 @@ public class ApiReader implements ItemReader<BestCategoryResponse> {
         log.info("[Reader] read start");
 
         // API 호출 제한 떄문에 쉼 필요
-        sleep(7);
+        sleep(8);
 
         log.info("count: {}, categories: {}", index.get(), categories.length);
         if (index.get() >= categories.length) {
@@ -42,15 +42,13 @@ public class ApiReader implements ItemReader<BestCategoryResponse> {
             request.getSubId()
         );
 
-/*
-        BestCategoryResponse bestCategoryResponse = BestCategoryResponse.builder()
+/*        BestCategoryResponse bestCategoryResponse = BestCategoryResponse.builder()
             .data(singletonList(
                 BestCategoryResponse.Product.builder()
                     .categoryName(categories[index.get()].getCategoryName())
                     .build())
             )
-            .build();
-*/
+            .build();*/
 
         index.incrementAndGet();
 
@@ -62,9 +60,9 @@ public class ApiReader implements ItemReader<BestCategoryResponse> {
         if (first) {
             first = false;
         } else {
-            log.info("sleep for {} seconds start.", minute);
+            log.info("sleep for {} minutes start.", minute);
             Thread.sleep(Duration.ofMinutes(minute).toMillis());
-            log.info("sleep for {} seconds finished.", minute);
+            log.info("sleep for {} minutes finished.", minute);
         }
     }
 }
